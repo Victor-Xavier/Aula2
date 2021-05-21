@@ -1,0 +1,37 @@
+<h1>Diretivas - *ngfor</h1>
+<h1>Cursos</h1>
+<ol>
+  <li *ngFor = " let c of cursos ">
+    {{ c }}
+  </li>
+</ol>
+<hr>
+<h1>Preços do cursos</h1>
+<ol>
+  <li *ngFor = "let p of precos">
+    {{ p }}  
+  </li>
+</ol>
+<hr>
+  <h2>array associativo<br></h2>
+  <ol>
+    <li *ngFor = "let det of infogeral">
+      {{ det.curso }} - {{ det.preco }}
+    </li>
+  </ol>
+<hr>
+<h2>Tabela de preços do cursos</h2>
+<table border = '1'>
+  <thead>
+    <th>Nome do curso</th>
+    <th>Preço do curso</th>
+    <th>Carga horária</th>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let det of infogeral">
+      <td>{{ det.curso }}</td>
+      <td >{{ det.preco }}</td>
+      <td>{{ det.ch }}</td>
+    </tr>
+  </tbody>
+</table>
